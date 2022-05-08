@@ -12,7 +12,7 @@ rm main
 で`invoke-async-aws-lambda-example.zip`が作成されるので、それをLambdaにアップロードすると動きます。
 ただし、ハンドラを`main`に変更し、Lambda関数の環境変数に以下を設定してください。
 
-- FUNCTION_NAME: 呼び出すLambda関数の名前
+- INVOKE_FUNCTION_NAME: 呼び出すLambda関数の名前
 
 また、Lamda関数のIAMロールに以下のポリシーを付与してください。
 

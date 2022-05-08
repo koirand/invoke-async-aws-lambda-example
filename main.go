@@ -30,7 +30,7 @@ func HandleRequest(ctx context.Context, request events.APIGatewayProxyRequest) (
 	// 別のLambda関数の呼び出し
 	result, err := client.Invoke(ctx, &lambdaApi.InvokeInput{
 		// 呼び出し先のLambda関数名(環境変数から取得)
-		FunctionName: aws.String(os.Getenv("FUNCTION_NAME")),
+		FunctionName: aws.String(os.Getenv("INVOKE_FUNCTION_NAME")),
 		// Eventを指定すると非同期実行される
 		InvocationType: "Event",
 		// requestのペイロード(json)をそのまま呼び出し先のLambda関数に渡す
